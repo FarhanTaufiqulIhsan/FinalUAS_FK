@@ -16,5 +16,10 @@ namespace FinalUAS_FK
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
