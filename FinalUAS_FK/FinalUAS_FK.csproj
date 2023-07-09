@@ -52,8 +52,32 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan.Designer.cs">
+      <DependentUpon>Pelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjual.Designer.cs">
+      <DependentUpon>Penjual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produk.Designer.cs">
+      <DependentUpon>Produk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suplier.Designer.cs">
+      <DependentUpon>Suplier.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
