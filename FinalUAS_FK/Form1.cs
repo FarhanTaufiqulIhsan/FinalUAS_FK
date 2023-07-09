@@ -24,7 +24,9 @@ namespace FinalUAS_FK
 
         private void btnPelanggan_Click(object sender, EventArgs e)
         {
-
+            Pelanggan plg = new Pelanggan();
+            plg.Show();
+            this.Hide();
         }
 
         private void btnSuplier_Click(object sender, EventArgs e)
