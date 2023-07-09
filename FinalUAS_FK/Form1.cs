@@ -40,5 +40,11 @@ namespace FinalUAS_FK
             pj.Show();
             this.Hide();
         }
+        private void btnProduk_Click(object sender, EventArgs e)
+        {
+            Produk p = new Produk();
+            p.Show();
+            this.Hide();
+        }
     }
 }

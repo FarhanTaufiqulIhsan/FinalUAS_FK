@@ -64,6 +64,7 @@
             this.btnProduk.TabIndex = 2;
             this.btnProduk.Text = "Produk";
             this.btnProduk.UseVisualStyleBackColor = true;
+            this.btnProduk.Click += new System.EventHandler(this.btnProduk_Click);
             // 
             // btnPelanggan
             // 
