@@ -44,6 +44,7 @@
             this.btnSuplier.TabIndex = 0;
             this.btnSuplier.Text = "Suplier";
             this.btnSuplier.UseVisualStyleBackColor = true;
+            this.btnSuplier.Click += new System.EventHandler(this.btnSuplier_Click);
             // 
             // btnPenjual
             // 
@@ -53,6 +54,7 @@
             this.btnPenjual.TabIndex = 1;
             this.btnPenjual.Text = "Penjual";
             this.btnPenjual.UseVisualStyleBackColor = true;
+            this.btnPenjual.Click += new System.EventHandler(this.btnPenjual_Click);
             // 
             // btnProduk
             // 

@@ -26,5 +26,19 @@ namespace FinalUAS_FK
         {
 
         }
+
+        private void btnSuplier_Click(object sender, EventArgs e)
+        {
+            Suplier sp = new Suplier();
+            sp.Show();
+            this.Hide();
+        }
+
+        private void btnPenjual_Click(object sender, EventArgs e)
+        {
+            Penjual pj = new Penjual();
+            pj.Show();
+            this.Hide();
+        }
     }
 }
