@@ -21,5 +21,10 @@ namespace FinalUAS_FK
         {
 
         }
+
+        private void btnPelanggan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
