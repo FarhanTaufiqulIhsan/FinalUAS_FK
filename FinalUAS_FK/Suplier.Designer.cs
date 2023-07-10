@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtids = new System.Windows.Forms.TextBox();
+            this.txtnamas = new System.Windows.Forms.TextBox();
+            this.txtalmt = new System.Windows.Forms.TextBox();
+            this.txtnotelp = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,40 +57,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(400, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // txtids
             // 
-            this.textBox1.Location = new System.Drawing.Point(294, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtids.Location = new System.Drawing.Point(294, 230);
+            this.txtids.Name = "txtids";
+            this.txtids.Size = new System.Drawing.Size(150, 22);
+            this.txtids.TabIndex = 1;
             // 
-            // textBox2
+            // txtnamas
             // 
-            this.textBox2.Location = new System.Drawing.Point(294, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 2;
+            this.txtnamas.Location = new System.Drawing.Point(294, 277);
+            this.txtnamas.Name = "txtnamas";
+            this.txtnamas.Size = new System.Drawing.Size(150, 22);
+            this.txtnamas.TabIndex = 2;
             // 
-            // textBox3
+            // txtalmt
             // 
-            this.textBox3.Location = new System.Drawing.Point(294, 321);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 22);
-            this.textBox3.TabIndex = 3;
+            this.txtalmt.Location = new System.Drawing.Point(294, 321);
+            this.txtalmt.Name = "txtalmt";
+            this.txtalmt.Size = new System.Drawing.Size(150, 22);
+            this.txtalmt.TabIndex = 3;
             // 
-            // textBox4
+            // txtnotelp
             // 
-            this.textBox4.Location = new System.Drawing.Point(294, 365);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 22);
-            this.textBox4.TabIndex = 4;
+            this.txtnotelp.Location = new System.Drawing.Point(294, 365);
+            this.txtnotelp.Name = "txtnotelp";
+            this.txtnotelp.Size = new System.Drawing.Size(150, 22);
+            this.txtnotelp.TabIndex = 4;
             // 
-            // textBox5
+            // txtemail
             // 
-            this.textBox5.Location = new System.Drawing.Point(294, 408);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 22);
-            this.textBox5.TabIndex = 5;
+            this.txtemail.Location = new System.Drawing.Point(294, 408);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(150, 22);
+            this.txtemail.TabIndex = 5;
             // 
             // label1
             // 
@@ -197,11 +197,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.txtnotelp);
+            this.Controls.Add(this.txtalmt);
+            this.Controls.Add(this.txtnamas);
+            this.Controls.Add(this.txtids);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Suplier";
             this.Text = "Suplier";
@@ -214,11 +214,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtids;
+        private System.Windows.Forms.TextBox txtnamas;
+        private System.Windows.Forms.TextBox txtalmt;
+        private System.Windows.Forms.TextBox txtnotelp;
+        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
