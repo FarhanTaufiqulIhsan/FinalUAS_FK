@@ -16,10 +16,13 @@ namespace FinalUAS_FK
         private string stringConnection = "data source=LAPTOP-P9JKEJMQ\\FARHANSQL;" + "database=Pemesanan_Baju_UAS;User ID=sa;password=Laserin45@";
         private SqlConnection koneksi;
         private string idp, nama, alamat, notelp, email;
-        BindingSource customerBindingSource = new BindingSource();
+        
+
         public Suplier()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            
         }
 
         private void Suplier_Load(object sender, EventArgs e)
