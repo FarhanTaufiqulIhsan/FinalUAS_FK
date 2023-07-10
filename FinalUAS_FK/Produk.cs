@@ -37,6 +37,17 @@ namespace FinalUAS_FK
             refreshform();
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Produk, Nama_Produk, Harga_Produk, Stok_Produk FROM dbo.Produk";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void Produk_Load(object sender, EventArgs e)
         {
 
