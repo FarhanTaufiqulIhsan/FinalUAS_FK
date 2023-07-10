@@ -35,6 +35,8 @@ namespace FinalUAS_FK
         public Penjual()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();  
         }
 
         private void Penjual_Load(object sender, EventArgs e)
