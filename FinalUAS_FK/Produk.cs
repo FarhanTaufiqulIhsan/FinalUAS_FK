@@ -29,9 +29,12 @@ namespace FinalUAS_FK
             txtHarga.Enabled = false;
             textStok.Enabled = false;
         }
+
         public Produk()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void Produk_Load(object sender, EventArgs e)
