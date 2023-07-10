@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIdPro = new System.Windows.Forms.TextBox();
+            this.txtNamaPro = new System.Windows.Forms.TextBox();
+            this.textStok = new System.Windows.Forms.TextBox();
+            this.txtHarga = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -91,33 +91,33 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Harga Produk";
             // 
-            // textBox1
+            // txtIdPro
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 22);
-            this.textBox1.TabIndex = 5;
+            this.txtIdPro.Location = new System.Drawing.Point(239, 223);
+            this.txtIdPro.Name = "txtIdPro";
+            this.txtIdPro.Size = new System.Drawing.Size(152, 22);
+            this.txtIdPro.TabIndex = 5;
             // 
-            // textBox2
+            // txtNamaPro
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 265);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 22);
-            this.textBox2.TabIndex = 6;
+            this.txtNamaPro.Location = new System.Drawing.Point(239, 265);
+            this.txtNamaPro.Name = "txtNamaPro";
+            this.txtNamaPro.Size = new System.Drawing.Size(152, 22);
+            this.txtNamaPro.TabIndex = 6;
             // 
-            // textBox3
+            // textStok
             // 
-            this.textBox3.Location = new System.Drawing.Point(239, 304);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 22);
-            this.textBox3.TabIndex = 7;
+            this.textStok.Location = new System.Drawing.Point(239, 304);
+            this.textStok.Name = "textStok";
+            this.textStok.Size = new System.Drawing.Size(152, 22);
+            this.textStok.TabIndex = 7;
             // 
-            // textBox4
+            // txtHarga
             // 
-            this.textBox4.Location = new System.Drawing.Point(239, 345);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(152, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtHarga.Location = new System.Drawing.Point(239, 345);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(152, 22);
+            this.txtHarga.TabIndex = 8;
             // 
             // btnOpen
             // 
@@ -174,10 +174,10 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHarga);
+            this.Controls.Add(this.textStok);
+            this.Controls.Add(this.txtNamaPro);
+            this.Controls.Add(this.txtIdPro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -198,10 +198,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIdPro;
+        private System.Windows.Forms.TextBox txtNamaPro;
+        private System.Windows.Forms.TextBox textStok;
+        private System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
