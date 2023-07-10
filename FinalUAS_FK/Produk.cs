@@ -52,5 +52,11 @@ namespace FinalUAS_FK
         {
 
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
     }
 }
