@@ -19,6 +19,10 @@ namespace FinalUAS_FK
         private void refreshform()
         {
             txtids.Text = "";
+            txtnamas.Text = "";
+            txtnotelp.Text = "";
+            txtalmt.Text = "";
+            txtemail.Text = "";
             txtids.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
