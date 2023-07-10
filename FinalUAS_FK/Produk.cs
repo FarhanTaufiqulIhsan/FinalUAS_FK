@@ -68,5 +68,10 @@ namespace FinalUAS_FK
             btnClear.Enabled = true;
             btnSave.Enabled = true;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
