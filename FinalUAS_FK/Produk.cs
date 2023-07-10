@@ -73,5 +73,47 @@ namespace FinalUAS_FK
         {
             refreshform();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string idproduk = txtIdPro.Text;
+            string nmproduk = txtNamaPro.Text;
+            string hrgproduk = txtHarga.Text;
+            string stokproduk = textStok.Text;
+
+            if (idproduk == "")
+            {
+                MessageBox.Show("Masukkan Id Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nmproduk == "")
+            {
+                MessageBox.Show("Masukkan Nama Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (hrgproduk == "")
+            {
+                MessageBox.Show("Masukkan Harga Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (stokproduk == "")
+            {
+                MessageBox.Show("Masukkan Stok Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Produk (ID_Produk, Nama_Produk, Harga_Produk, Stok_produk) VALUES (@ID_Produk, @Nama_Produk, @Harga_Produk, @Stok_produk)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@ID_Produk", idproduk));
+                cmd.Parameters.Add(new SqlParameter("@Nama_Produk", nmproduk));
+                cmd.Parameters.Add(new SqlParameter("@Harga_Produk", hrgproduk));
+                cmd.Parameters.Add(new SqlParameter("@Stok_produk", stokproduk));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
+        }
     }
 }
