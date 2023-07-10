@@ -16,5 +16,10 @@ namespace FinalUAS_FK
         {
             InitializeComponent();
         }
+
+        private void Produk_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
