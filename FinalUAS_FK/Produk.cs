@@ -58,5 +58,15 @@ namespace FinalUAS_FK
             dataGridView();
             btnOpen.Enabled = false;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtIdPro.Enabled = true;
+            txtHarga.Enabled = true;
+            txtNamaPro.Enabled = true;
+            textStok.Enabled = true;
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+        }
     }
 }
