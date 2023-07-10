@@ -59,7 +59,13 @@ namespace FinalUAS_FK
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            txtids.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+            txtalmt.Enabled = true;
+            txtemail.Enabled = true;
+            txtnamas.Enabled = true;
+            txtnotelp.Enabled = true;
         }
     }
 }
