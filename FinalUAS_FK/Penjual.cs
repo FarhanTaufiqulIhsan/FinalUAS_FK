@@ -39,6 +39,17 @@ namespace FinalUAS_FK
             refreshform();  
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Penjual, Nama_Penjual, Alamat_Penjual, Nomor_Telepon, Email FROM dbo.Penjual";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void Penjual_Load(object sender, EventArgs e)
         {
 
