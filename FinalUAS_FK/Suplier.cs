@@ -23,9 +23,10 @@ namespace FinalUAS_FK
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             txtalmt.Enabled = false;
-            txtalmt.Enabled = false;
+            txtemail.Enabled = false;
             txtnamas.Enabled = false;
             txtnotelp.Enabled = false;
+
         }
         public Suplier()
         {
