@@ -37,7 +37,7 @@ namespace FinalUAS_FK
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "SELECT ID_Suplier, Nama_Suplier, Alamat_Suplier, Nomor_Telpon, Email FROM dbo.Suplier";
+            string query = "SELECT ID_Suplier, Nama_Suplier, Alamat_Suplier, Nomor_Telepon, Email FROM dbo.Suplier";
             SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -46,6 +46,17 @@ namespace FinalUAS_FK
         }
 
         private void Suplier_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
