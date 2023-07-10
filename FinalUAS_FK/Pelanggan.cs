@@ -38,6 +38,17 @@ namespace FinalUAS_FK
             refreshform();
         }
 
-        
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Pelanggan, Nama_Pelanggan, Alamat_Pelanggan, Nomor_Telepon, Email FROM dbo.Pelanggan";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+
     }
 }
