@@ -34,6 +34,8 @@ namespace FinalUAS_FK
         public Pelanggan()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         
