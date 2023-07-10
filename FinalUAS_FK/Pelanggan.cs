@@ -70,5 +70,53 @@ namespace FinalUAS_FK
         {
             refreshform();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string idpelanggan = txtIdPel.Text;
+            string nmpelanggan = txtNamaPel.Text;
+            string almtpelanggan = txtAlmt.Text;
+            string notelp = txtNotelp.Text;
+            string email = txtEmail.Text;
+
+            if (idpelanggan == "")
+            {
+                MessageBox.Show("Masukkan Id Pelanggan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nmpelanggan == "")
+            {
+                MessageBox.Show("Masukkan Nama Pelanggan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (almtpelanggan == "")
+            {
+                MessageBox.Show("Masukkan Alamat Pelanggan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (notelp == "")
+            {
+                MessageBox.Show("Masukkan No Telepon", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (email == "")
+            {
+                MessageBox.Show("Masukkan Email", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Pelanggan (ID_Pelanggan, Nama_Pelanggan, Alamat_Pelanggan, Nomor_Telepon, Email) VALUES (@ID_Pelanggan, @Nama_Pelanggan, @Alamat_Pelanggan, @Nomor_Telepon, @Email)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@ID_Pelanggan", idpelanggan));
+                cmd.Parameters.Add(new SqlParameter("@Nama_Pelanggan", nmpelanggan));
+                cmd.Parameters.Add(new SqlParameter("@Alamat_Pelanggan", almtpelanggan));
+                cmd.Parameters.Add(new SqlParameter("@Nomor_Telepon", notelp));
+                cmd.Parameters.Add(new SqlParameter("@Email", email));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
+        }
     }
 }
