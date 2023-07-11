@@ -220,6 +220,7 @@
             this.btnTr.TabIndex = 18;
             this.btnTr.Text = "Transaksi SP";
             this.btnTr.UseVisualStyleBackColor = true;
+            this.btnTr.Click += new System.EventHandler(this.btnTr_Click);
             // 
             // Suplier
             // 
