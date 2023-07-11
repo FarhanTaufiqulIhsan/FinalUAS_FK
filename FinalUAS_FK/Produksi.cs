@@ -30,6 +30,8 @@ namespace FinalUAS_FK
         public Produksi()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void Produksi_Load(object sender, EventArgs e)
