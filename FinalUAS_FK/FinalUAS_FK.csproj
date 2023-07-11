@@ -70,6 +70,12 @@
     <Compile Include="Penjual.Designer.cs">
       <DependentUpon>Penjual.cs</DependentUpon>
     </Compile>
+    <Compile Include="PenjuialanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PenjuialanProduk.Designer.cs">
+      <DependentUpon>PenjuialanProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Produk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Penjual.resx">
       <DependentUpon>Penjual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PenjuialanProduk.resx">
+      <DependentUpon>PenjuialanProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produk.resx">
       <DependentUpon>Produk.cs</DependentUpon>
