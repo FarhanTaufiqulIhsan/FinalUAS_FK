@@ -16,5 +16,12 @@ namespace FinalUAS_FK
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Penjual p = new Penjual();
+            p.Show();
+            this.Hide();
+        }
     }
 }
