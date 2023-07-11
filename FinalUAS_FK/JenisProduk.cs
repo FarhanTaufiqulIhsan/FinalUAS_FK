@@ -35,6 +35,18 @@ namespace FinalUAS_FK
             refreshform();
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "select p.ID_Produk, m.Nama_Jenis_Produk, m.Merek_Produk,m.Ukuran_Produk from Jenis_Produk m"+
+                "join Produk p  on m.ID_Produk = p.Harga_Produk";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
