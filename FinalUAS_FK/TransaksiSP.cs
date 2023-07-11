@@ -28,9 +28,12 @@ namespace FinalUAS_FK
             btnClear.Enabled = false;
             btnSave.Enabled = false;
         }
+
         public TransaksiSP()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
