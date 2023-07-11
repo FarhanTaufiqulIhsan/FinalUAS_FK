@@ -132,5 +132,10 @@ namespace FinalUAS_FK
             this.Hide();
             
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
