@@ -56,5 +56,15 @@ namespace FinalUAS_FK
         {
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+            cbxIdp.Enabled = true;
+            txtHp.Enabled = true;
+            txtMp.Enabled = true;
+            txtNjp.Enabled = true;
+        }
     }
 }
