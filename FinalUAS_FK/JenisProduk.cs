@@ -38,8 +38,7 @@ namespace FinalUAS_FK
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "select p.ID_Produk, m.Nama_Jenis_Produk, m.Merek_Produk,m.Ukuran_Produk from Jenis_Produk m"+
-                "join Produk p  on m.ID_Produk = p.Harga_Produk";
+            string query = "select * from dbo.Jenis_Produk";
             SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -77,6 +76,12 @@ namespace FinalUAS_FK
             txtHp.Enabled = true;
             txtMp.Enabled = true;
             txtNjp.Enabled = true;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
         }
     }
 }
