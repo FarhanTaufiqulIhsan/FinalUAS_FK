@@ -36,6 +36,17 @@ namespace FinalUAS_FK
             refreshform();
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "select * from dbo.Transaksi_SP";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Suplier sp = new Suplier();
