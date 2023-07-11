@@ -16,7 +16,7 @@ namespace FinalUAS_FK
         private string stringConnection = "data source=LAPTOP-P9JKEJMQ\\FARHANSQL;" + "database=Pemesanan_Baju_UAS;User ID=sa;password=Laserin45@";
         private SqlConnection koneksi;
 
-        private void refresform()
+        private void refreshform()
         {
             txtIdt.Text = "";
             txtTb.Text = "";
@@ -31,6 +31,8 @@ namespace FinalUAS_FK
         public TransaksiPP()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
