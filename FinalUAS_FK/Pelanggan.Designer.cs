@@ -207,6 +207,7 @@
             this.btnDlt.TabIndex = 18;
             this.btnDlt.Text = "Delete";
             this.btnDlt.UseVisualStyleBackColor = true;
+            this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
             // 
             // Pelanggan
             // 
