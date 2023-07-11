@@ -106,14 +106,20 @@ namespace FinalUAS_FK
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtKp.Enabled = false;
-            cbxIdP.Enabled = false;
-            cbxIdS.Enabled = false;
-            dtTp.Enabled = false;
-            btnSave.Enabled = false;
-            btnClear.Enabled = false;
+            txtKp.Enabled = true;
+            cbxIdP.Enabled = true;
+            cbxIdS.Enabled = true;
+            dtTp.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
             cbIdP();
             cbIdS();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
         }
     }
 }
