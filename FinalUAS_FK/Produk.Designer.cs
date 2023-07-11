@@ -178,6 +178,7 @@
             this.btnJp.TabIndex = 14;
             this.btnJp.Text = "Jenis Produk";
             this.btnJp.UseVisualStyleBackColor = true;
+            this.btnJp.Click += new System.EventHandler(this.btnJp_Click);
             // 
             // Produk
             // 
