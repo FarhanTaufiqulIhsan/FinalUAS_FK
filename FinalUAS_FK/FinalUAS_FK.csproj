@@ -82,6 +82,12 @@
     <Compile Include="Produk.Designer.cs">
       <DependentUpon>Produk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Produksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produksi.Designer.cs">
+      <DependentUpon>Produksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Suplier.cs">
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Produk.resx">
       <DependentUpon>Produk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produksi.resx">
+      <DependentUpon>Produksi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
