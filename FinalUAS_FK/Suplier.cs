@@ -135,7 +135,38 @@ namespace FinalUAS_FK
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            string id = txtids.Text;
+            if (id == "")
+            {
+                MessageBox.Show("Masukkan ID Suplier yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            string sql = "DELETE FROM Suplier WHERE ID_Suplier = @ID_Suplier";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Suplier", id);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView(); // Refresh tampilan data setelah penghapusan
+                        refreshform(); // Mengosongkan form setelah penghapusan
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
