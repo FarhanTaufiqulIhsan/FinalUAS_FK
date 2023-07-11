@@ -31,6 +31,8 @@ namespace FinalUAS_FK
         public JenisProduk()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
