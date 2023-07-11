@@ -119,5 +119,77 @@ namespace FinalUAS_FK
             dataGridView();
             btnOpen.Enabled = false;
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string idProduk = cbxIdPr.SelectedValue.ToString();
+            string idPelanggan = cbxIdPl.SelectedValue.ToString();
+            string date = dtT.Text;
+            string total = txtTb.Text;
+            string idtransaksi = txtIdt.Text;
+
+            if (idProduk == "")
+            {
+                MessageBox.Show("Pilih ID Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idPelanggan == "")
+            {
+                MessageBox.Show("Pilih ID Pelanggan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (date == "")
+            {
+                MessageBox.Show("Masukkan Tanggal", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (total == "")
+            {
+                MessageBox.Show("Masukkan Total Bayar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idtransaksi == "")
+            {
+                MessageBox.Show("Masukkan ID Transaksi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "INSERT INTO Transaksi_PP (ID_Produk, ID_Pelanggan, Tanggal_Transaksi, Total_Bayar, ID_Transaksi) VALUES (@ID_Produk, @ID_Pelanggan, @Tanggal_Transaksi, @Total_Bayar, @ID_Transaksi)";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Produk", idProduk);
+                command.Parameters.AddWithValue("@ID_Pelanggan", idPelanggan);
+                command.Parameters.AddWithValue("@Tanggal_Transaksi", date);
+                command.Parameters.AddWithValue("@Total_Bayar", total);
+                command.Parameters.AddWithValue("@ID_Transaksi", idtransaksi);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform(); // Mengosongkan form setelah menyimpan
+                        dataGridView(); // Refresh tampilan data setelah menyimpan
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menyimpan data.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
