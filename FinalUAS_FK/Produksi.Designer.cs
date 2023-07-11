@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtKp = new System.Windows.Forms.TextBox();
+            this.dtTp = new System.Windows.Forms.DateTimePicker();
+            this.cbxIdS = new System.Windows.Forms.ComboBox();
+            this.cbxIdP = new System.Windows.Forms.ComboBox();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -91,35 +91,35 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "ID Produk";
             // 
-            // textBox1
+            // txtKp
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 5;
+            this.txtKp.Location = new System.Drawing.Point(211, 240);
+            this.txtKp.Name = "txtKp";
+            this.txtKp.Size = new System.Drawing.Size(200, 22);
+            this.txtKp.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dtTp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(211, 278);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtTp.Location = new System.Drawing.Point(211, 278);
+            this.dtTp.Name = "dtTp";
+            this.dtTp.Size = new System.Drawing.Size(200, 22);
+            this.dtTp.TabIndex = 6;
             // 
-            // comboBox1
+            // cbxIdS
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 319);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cbxIdS.FormattingEnabled = true;
+            this.cbxIdS.Location = new System.Drawing.Point(211, 319);
+            this.cbxIdS.Name = "cbxIdS";
+            this.cbxIdS.Size = new System.Drawing.Size(200, 24);
+            this.cbxIdS.TabIndex = 7;
             // 
-            // comboBox2
+            // cbxIdP
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(211, 357);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 8;
+            this.cbxIdP.FormattingEnabled = true;
+            this.cbxIdP.Location = new System.Drawing.Point(211, 357);
+            this.cbxIdP.Name = "cbxIdP";
+            this.cbxIdP.Size = new System.Drawing.Size(200, 24);
+            this.cbxIdP.TabIndex = 8;
             // 
             // btnOpen
             // 
@@ -176,10 +176,10 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbxIdP);
+            this.Controls.Add(this.cbxIdS);
+            this.Controls.Add(this.dtTp);
+            this.Controls.Add(this.txtKp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -200,10 +200,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtKp;
+        private System.Windows.Forms.DateTimePicker dtTp;
+        private System.Windows.Forms.ComboBox cbxIdS;
+        private System.Windows.Forms.ComboBox cbxIdP;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
