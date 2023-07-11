@@ -121,5 +121,65 @@ namespace FinalUAS_FK
             dataGridView();
             btnOpen.Enabled = false;
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string idProduk = cbxIdP.SelectedValue.ToString();
+            string idSuplier = cbxIdS.SelectedValue.ToString();
+            string date = dtTp.Text;
+            string kodeproduksi = txtKp.Text;
+
+            if (idProduk == "")
+            {
+                MessageBox.Show("Pilih ID Produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idSuplier == "")
+            {
+                MessageBox.Show("Pilih ID Suplier", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (date == "")
+            {
+                MessageBox.Show("Masukkan Tanggal", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (kodeproduksi == "")
+            {
+                MessageBox.Show("Masukkan Kode Produksi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+
+            string sql = "INSERT INTO Produksi (ID_Produk, ID_Suplier, Tanggal_Produksi, Kode_Produksi) VALUES (@ID_Produk, @ID_Suplier, @Tanggal_Produksi, @Kode_Produksi)";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Produk", idProduk);
+                command.Parameters.AddWithValue("@ID_Suplier", idSuplier);
+                command.Parameters.AddWithValue("@Tanggal_Produksi", date);
+                command.Parameters.AddWithValue("@Kode_Produksi", kodeproduksi);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menyimpan data.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
