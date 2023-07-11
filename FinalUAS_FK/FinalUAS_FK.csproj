@@ -96,6 +96,12 @@
     <Compile Include="Suplier.Designer.cs">
       <DependentUpon>Suplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransaksiPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiPP.Designer.cs">
+      <DependentUpon>TransaksiPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransaksiSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="Suplier.resx">
       <DependentUpon>Suplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiPP.resx">
+      <DependentUpon>TransaksiPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransaksiSP.resx">
       <DependentUpon>TransaksiSP.cs</DependentUpon>
