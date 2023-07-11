@@ -129,5 +129,71 @@ namespace FinalUAS_FK
             jp.Show();
             this.Hide();
         }
+
+        private void btnUpdt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["ID_Produk"].Value.ToString();
+            string nmproduk = txtNamaPro.Text;
+            string stokproduk = textStok.Text;
+            string harga = txtHarga.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("ID Produk tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nmproduk == "")
+            {
+                MessageBox.Show("Masukkan Nama Produk", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (stokproduk == "")
+            {
+                MessageBox.Show("Masukkan Stok Produk", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (harga == "")
+            {
+                MessageBox.Show("Masukkan Harga", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+             
+            string sql = "UPDATE Produk SET Nama_Produk = @Nama_Produk, Stok_Produk = @Stok_Produk, Harga_Produk = @Harga_Produk WHERE ID_Produk = @ID_Produk";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Produk", id);
+                command.Parameters.AddWithValue("@Nama_Produk", nmproduk);
+                command.Parameters.AddWithValue("@Stok_Produk", stokproduk);
+                command.Parameters.AddWithValue("@Harga_Produk", harga);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
     }
 }
