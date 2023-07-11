@@ -133,5 +133,13 @@ namespace FinalUAS_FK
             f1.Show();
             this.Hide();
         }
+
+        //Button Penjualan
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PenjuialanProduk pp = new PenjuialanProduk();
+            pp.Show();
+            this.Hide();
+        }
     }
 }
