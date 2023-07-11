@@ -100,5 +100,18 @@ namespace FinalUAS_FK
             p.Show();
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            cbxIdPl.Enabled = true;
+            cbxIdPr.Enabled = true;
+            dtT.Enabled = true;
+            txtTb.Enabled = true;
+            txtIdt.Enabled = true;
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+            cbIdPl();
+            cbIdPr();
+        }
     }
 }
