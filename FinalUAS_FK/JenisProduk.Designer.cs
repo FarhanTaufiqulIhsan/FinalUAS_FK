@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxIdp = new System.Windows.Forms.ComboBox();
+            this.txtNjp = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txtMp = new System.Windows.Forms.TextBox();
+            this.txtHp = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbxIdp
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(316, 201);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 24);
-            this.comboBox1.TabIndex = 0;
+            this.cbxIdp.FormattingEnabled = true;
+            this.cbxIdp.Location = new System.Drawing.Point(316, 201);
+            this.cbxIdp.Name = "cbxIdp";
+            this.cbxIdp.Size = new System.Drawing.Size(133, 24);
+            this.cbxIdp.TabIndex = 0;
             // 
-            // textBox1
+            // txtNjp
             // 
-            this.textBox1.Location = new System.Drawing.Point(316, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNjp.Location = new System.Drawing.Point(316, 251);
+            this.txtNjp.Name = "txtNjp";
+            this.txtNjp.Size = new System.Drawing.Size(133, 22);
+            this.txtNjp.TabIndex = 1;
+            this.txtNjp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -107,85 +107,85 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Harga Produk";
             // 
-            // textBox2
+            // txtMp
             // 
-            this.textBox2.Location = new System.Drawing.Point(316, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 22);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtMp.Location = new System.Drawing.Point(316, 292);
+            this.txtMp.Name = "txtMp";
+            this.txtMp.Size = new System.Drawing.Size(133, 22);
+            this.txtMp.TabIndex = 7;
+            this.txtMp.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtHp
             // 
-            this.textBox3.Location = new System.Drawing.Point(316, 335);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(133, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtHp.Location = new System.Drawing.Point(316, 335);
+            this.txtHp.Name = "txtHp";
+            this.txtHp.Size = new System.Drawing.Size(133, 22);
+            this.txtHp.TabIndex = 8;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(512, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 35);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(512, 201);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(102, 35);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Location = new System.Drawing.Point(512, 257);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 35);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(512, 257);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(102, 35);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.Location = new System.Drawing.Point(512, 312);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 32);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(512, 312);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(102, 32);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnOpen
             // 
-            this.button4.Location = new System.Drawing.Point(596, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 39);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Open";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnOpen.Location = new System.Drawing.Point(596, 12);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(87, 39);
+            this.btnOpen.TabIndex = 12;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnBack
             // 
-            this.button5.Location = new System.Drawing.Point(607, 403);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 35);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Back";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnBack.Location = new System.Drawing.Point(607, 403);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(94, 35);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // JenisProduk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtHp);
+            this.Controls.Add(this.txtMp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtNjp);
+            this.Controls.Add(this.cbxIdp);
             this.Name = "JenisProduk";
             this.Text = "JenisProduk";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -196,19 +196,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbxIdp;
+        private System.Windows.Forms.TextBox txtNjp;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtMp;
+        private System.Windows.Forms.TextBox txtHp;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnBack;
     }
 }
