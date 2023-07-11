@@ -44,6 +44,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnUpdt = new System.Windows.Forms.Button();
+            this.btnDlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +143,7 @@
             // 
             this.btnOpen.Location = new System.Drawing.Point(593, 37);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(80, 39);
             this.btnOpen.TabIndex = 12;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
@@ -151,7 +153,7 @@
             // 
             this.btnAdd.Location = new System.Drawing.Point(495, 211);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(75, 36);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -161,7 +163,7 @@
             // 
             this.btnSave.Location = new System.Drawing.Point(495, 273);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 33);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -171,7 +173,7 @@
             // 
             this.btnClear.Location = new System.Drawing.Point(495, 332);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(75, 37);
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -181,17 +183,37 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(692, 391);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(78, 30);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnUpdt
+            // 
+            this.btnUpdt.Location = new System.Drawing.Point(615, 213);
+            this.btnUpdt.Name = "btnUpdt";
+            this.btnUpdt.Size = new System.Drawing.Size(75, 34);
+            this.btnUpdt.TabIndex = 17;
+            this.btnUpdt.Text = "Update";
+            this.btnUpdt.UseVisualStyleBackColor = true;
+            // 
+            // btnDlt
+            // 
+            this.btnDlt.Location = new System.Drawing.Point(615, 273);
+            this.btnDlt.Name = "btnDlt";
+            this.btnDlt.Size = new System.Drawing.Size(75, 33);
+            this.btnDlt.TabIndex = 18;
+            this.btnDlt.Text = "Delete";
+            this.btnDlt.UseVisualStyleBackColor = true;
             // 
             // Pelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDlt);
+            this.Controls.Add(this.btnUpdt);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -234,5 +256,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnUpdt;
+        private System.Windows.Forms.Button btnDlt;
     }
 }
