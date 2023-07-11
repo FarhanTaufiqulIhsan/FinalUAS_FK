@@ -135,12 +135,13 @@ namespace FinalUAS_FK
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string id = txtids.Text;
-            if (id == "")
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Masukkan ID Suplier yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Pilih baris data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string id = dataGridView1.SelectedRows[0].Cells["ID_Suplier"].Value.ToString();
 
             string sql = "DELETE FROM Suplier WHERE ID_Suplier = @ID_Suplier";
             using (SqlCommand command = new SqlCommand(sql, koneksi))
@@ -154,8 +155,9 @@ namespace FinalUAS_FK
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dataGridView(); // Refresh tampilan data setelah penghapusan
-                        refreshform(); // Mengosongkan form setelah penghapusan
+                        koneksi.Close();
+                        refreshform(); 
+                        dataGridView(); 
                     }
                     else
                     {
