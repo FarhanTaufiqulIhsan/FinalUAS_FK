@@ -125,5 +125,78 @@ namespace FinalUAS_FK
             f1.Show();
             this.Hide();
         }
+
+        private void btnUpdt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["ID_Pelanggan"].Value.ToString();
+            string nmpelanggan = txtNamaPel.Text;
+            string almtpelanggan = txtAlmt.Text;
+            string notelp = txtNotelp.Text;
+            string email = txtEmail.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("ID Pelanggan tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nmpelanggan == "")
+            {
+                MessageBox.Show("Masukkan Nama Pelanggan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (almtpelanggan == "")
+            {
+                MessageBox.Show("Masukkan Alamat Pelanggan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (notelp == "")
+            {
+                MessageBox.Show("Masukkan No Telepon", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (email == "")
+            {
+                MessageBox.Show("Masukkan Email", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE Pelanggan SET Nama_Pelanggan = @Nama_Pelanggan, Alamat_Pelanggan = @Alamat_Pelanggan, Nomor_Telepon = @Nomor_Telepon, Email = @Email WHERE ID_Pelanggan = @ID_Pelanggan";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Pelanggan", id);
+                command.Parameters.AddWithValue("@Nama_Pelanggan", nmpelanggan);
+                command.Parameters.AddWithValue("@Alamat_Pelanggan", almtpelanggan);
+                command.Parameters.AddWithValue("@Nomor_Telepon", notelp);
+                command.Parameters.AddWithValue("@Email", email);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
     }
 }

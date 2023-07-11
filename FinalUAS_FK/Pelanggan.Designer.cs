@@ -197,6 +197,7 @@
             this.btnUpdt.TabIndex = 17;
             this.btnUpdt.Text = "Update";
             this.btnUpdt.UseVisualStyleBackColor = true;
+            this.btnUpdt.Click += new System.EventHandler(this.btnUpdt_Click);
             // 
             // btnDlt
             // 
