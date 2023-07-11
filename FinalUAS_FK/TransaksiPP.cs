@@ -16,5 +16,12 @@ namespace FinalUAS_FK
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Pelanggan p = new Pelanggan();
+            p.Show();
+            this.Hide();
+        }
     }
 }
