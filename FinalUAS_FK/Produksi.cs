@@ -34,6 +34,17 @@ namespace FinalUAS_FK
             refreshform();
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "select * from dbo.Produksi";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void Produksi_Load(object sender, EventArgs e)
         {
 
