@@ -103,9 +103,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(116, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Harga Produk";
+            this.label4.Text = "Ukuran Produk";
             // 
             // txtMp
             // 
