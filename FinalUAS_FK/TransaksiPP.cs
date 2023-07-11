@@ -70,7 +70,29 @@ namespace FinalUAS_FK
             cbxIdPr.DataSource = dt;
         }
 
-        
+        private void cbIdPl()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Pelanggan FROM Pelanggan";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID_Pelanggan");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["ID_Pelanggan"] = reader["ID_Pelanggan"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxIdPl.DisplayMember = "ID_Pelanggan";
+            cbxIdPl.ValueMember = "ID_Pelanggan";
+            cbxIdPl.DataSource = dt;
+        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
