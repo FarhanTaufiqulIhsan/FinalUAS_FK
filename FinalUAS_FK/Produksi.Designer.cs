@@ -42,6 +42,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnDlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,11 +171,22 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnDlt
+            // 
+            this.btnDlt.Location = new System.Drawing.Point(585, 240);
+            this.btnDlt.Name = "btnDlt";
+            this.btnDlt.Size = new System.Drawing.Size(86, 31);
+            this.btnDlt.TabIndex = 14;
+            this.btnDlt.Text = "Delete";
+            this.btnDlt.UseVisualStyleBackColor = true;
+            this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
+            // 
             // Produksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnDlt;
     }
 }
