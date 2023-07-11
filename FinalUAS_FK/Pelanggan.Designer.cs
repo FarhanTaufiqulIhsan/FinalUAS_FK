@@ -46,6 +46,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnUpdt = new System.Windows.Forms.Button();
             this.btnDlt = new System.Windows.Forms.Button();
+            this.btnTrPP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,11 +210,22 @@
             this.btnDlt.UseVisualStyleBackColor = true;
             this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
             // 
+            // btnTrPP
+            // 
+            this.btnTrPP.Location = new System.Drawing.Point(615, 332);
+            this.btnTrPP.Name = "btnTrPP";
+            this.btnTrPP.Size = new System.Drawing.Size(101, 37);
+            this.btnTrPP.TabIndex = 19;
+            this.btnTrPP.Text = "Transaksi PP";
+            this.btnTrPP.UseVisualStyleBackColor = true;
+            this.btnTrPP.Click += new System.EventHandler(this.btnTrPP_Click);
+            // 
             // Pelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTrPP);
             this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.btnUpdt);
             this.Controls.Add(this.btnBack);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnUpdt;
         private System.Windows.Forms.Button btnDlt;
+        private System.Windows.Forms.Button btnTrPP;
     }
 }

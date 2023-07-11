@@ -236,5 +236,12 @@ namespace FinalUAS_FK
                 }
             }
         }
+
+        private void btnTrPP_Click(object sender, EventArgs e)
+        {
+            TransaksiPP tpp = new TransaksiPP();
+            tpp.Show();
+            this.Hide();
+        }
     }
 }
