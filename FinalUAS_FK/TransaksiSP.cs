@@ -16,5 +16,12 @@ namespace FinalUAS_FK
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Suplier sp = new Suplier();
+            sp.Show();
+            this.Hide();
+        }
     }
 }
