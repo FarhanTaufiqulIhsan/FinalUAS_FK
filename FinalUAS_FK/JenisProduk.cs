@@ -26,5 +26,12 @@ namespace FinalUAS_FK
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Produk p = new Produk();
+            p.Show();
+            this.Hide();
+        }
     }
 }
