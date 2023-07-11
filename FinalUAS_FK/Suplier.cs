@@ -250,5 +250,12 @@ namespace FinalUAS_FK
             tp.Show();
             this.Hide();
         }
+
+        private void btnProduksi_Click(object sender, EventArgs e)
+        {
+            Produksi prd = new Produksi();
+            prd.Show();
+            this.Hide();
+        }
     }
 }

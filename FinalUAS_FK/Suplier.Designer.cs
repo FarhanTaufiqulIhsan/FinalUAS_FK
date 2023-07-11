@@ -47,6 +47,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnTr = new System.Windows.Forms.Button();
+            this.btnProduksi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,11 +223,22 @@
             this.btnTr.UseVisualStyleBackColor = true;
             this.btnTr.Click += new System.EventHandler(this.btnTr_Click);
             // 
+            // btnProduksi
+            // 
+            this.btnProduksi.Location = new System.Drawing.Point(559, 109);
+            this.btnProduksi.Name = "btnProduksi";
+            this.btnProduksi.Size = new System.Drawing.Size(94, 33);
+            this.btnProduksi.TabIndex = 19;
+            this.btnProduksi.Text = "Produksi";
+            this.btnProduksi.UseVisualStyleBackColor = true;
+            this.btnProduksi.Click += new System.EventHandler(this.btnProduksi_Click);
+            // 
             // Suplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnProduksi);
             this.Controls.Add(this.btnTr);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnTr;
+        private System.Windows.Forms.Button btnProduksi;
     }
 }
