@@ -15,6 +15,19 @@ namespace FinalUAS_FK
     {
         private string stringConnection = "data source=LAPTOP-P9JKEJMQ\\FARHANSQL;" + "database=Pemesanan_Baju_UAS;User ID=sa;password=Laserin45@";
         private SqlConnection koneksi;
+
+        private void refreshform()
+        {
+            btnClear.Enabled = false;
+            btnSave.Enabled = false;
+            cbxIdp.Enabled = false;
+            txtHp.Enabled = false;
+            txtMp.Enabled = false;
+            txtNjp.Enabled = false;
+            txtHp.Text = "";
+            txtMp.Text = "";
+            txtNjp.Text = "";
+        }
         public JenisProduk()
         {
             InitializeComponent();
