@@ -46,6 +46,32 @@ namespace FinalUAS_FK
             koneksi.Close();
         }
 
+        private void cbIdPr()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Produk FROM Produk";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID_Produk");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["ID_Produk"] = reader["ID_Produk"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxIdPr.DisplayMember = "ID_Produk";
+            cbxIdPr.ValueMember = "ID_Produk";
+            cbxIdPr.DataSource = dt;
+        }
+
+        
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Pelanggan p = new Pelanggan();
