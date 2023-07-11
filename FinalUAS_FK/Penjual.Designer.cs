@@ -47,6 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnTrsp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,11 +221,22 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnTrsp
+            // 
+            this.btnTrsp.Location = new System.Drawing.Point(608, 95);
+            this.btnTrsp.Name = "btnTrsp";
+            this.btnTrsp.Size = new System.Drawing.Size(110, 42);
+            this.btnTrsp.TabIndex = 19;
+            this.btnTrsp.Text = "Transaksi SP";
+            this.btnTrsp.UseVisualStyleBackColor = true;
+            this.btnTrsp.Click += new System.EventHandler(this.btnTrsp_Click);
+            // 
             // Penjual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTrsp);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.button1);
@@ -274,5 +286,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnTrsp;
     }
 }
