@@ -68,6 +68,30 @@ namespace FinalUAS_FK
             cbxIdP.ValueMember = "ID_Produk";
             cbxIdP.DataSource = dt;
         }
+
+        private void cbIdS()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Suplier FROM Suplier";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID_Suplier");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["ID_Suplier"] = reader["ID_Suplier"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxIdS.DisplayMember = "ID_Suplier";
+            cbxIdS.ValueMember = "ID_Suplier";
+            cbxIdS.DataSource = dt;
+        }
         private void Produksi_Load(object sender, EventArgs e)
         {
 
