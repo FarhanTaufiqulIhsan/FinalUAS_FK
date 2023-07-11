@@ -100,6 +100,7 @@ namespace FinalUAS_FK
             txtHp.Enabled = true;
             txtMp.Enabled = true;
             txtNjp.Enabled = true;
+            cbIdPr();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
