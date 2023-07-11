@@ -200,6 +200,7 @@
             this.btnDlt.TabIndex = 16;
             this.btnDlt.Text = "Delete";
             this.btnDlt.UseVisualStyleBackColor = true;
+            this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
             // 
             // Produk
             // 
