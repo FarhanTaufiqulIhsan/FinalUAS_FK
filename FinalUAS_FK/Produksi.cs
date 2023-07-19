@@ -72,23 +72,25 @@ namespace FinalUAS_FK
         private void cbIdS()
         {
             koneksi.Open();
-            string query = "SELECT ID_Suplier FROM Suplier";
+            string query = "SELECT ID_Suplier, Nama_Suplier FROM Suplier";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Suplier");
+            dt.Columns.Add("Nama_Suplier");
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Suplier"] = reader["ID_Suplier"].ToString();
+                row["Nama_Suplier"] = reader["Nama_Suplier"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdS.DisplayMember = "ID_Suplier";
+            cbxIdS.DisplayMember = "Nama_Suplier";
             cbxIdS.ValueMember = "ID_Suplier";
             cbxIdS.DataSource = dt;
         }
