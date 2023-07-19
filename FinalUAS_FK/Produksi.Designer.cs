@@ -79,18 +79,18 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(57, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "ID Suplier";
+            this.label3.Text = "Nama Suplier";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(57, 357);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "ID Produk";
+            this.label4.Text = "Nama Produk";
             // 
             // txtKp
             // 
