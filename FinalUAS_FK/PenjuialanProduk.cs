@@ -70,6 +70,8 @@ namespace FinalUAS_FK
             dtP.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;
+            cbIdPj();
+            cbIdpr();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -162,8 +164,8 @@ namespace FinalUAS_FK
             {
                 command.Parameters.AddWithValue("@ID_Penjual", idpenjual);
                 command.Parameters.AddWithValue("@ID_Suplier", idproduk);
-                command.Parameters.AddWithValue("@Tanggal_Transaksi", date);
-                command.Parameters.AddWithValue("@Total_Bayar", idpenjualan);
+                command.Parameters.AddWithValue("@Tanggal_Penjualan", date);
+                command.Parameters.AddWithValue("@ID_Penjualan", idpenjualan);
 
                 try
                 {
@@ -173,8 +175,8 @@ namespace FinalUAS_FK
                     {
                         MessageBox.Show("Data berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         koneksi.Close();
-                        refreshform(); // Mengosongkan form setelah menyimpan
-                        dataGridView(); // Refresh tampilan data setelah menyimpan
+                        refreshform(); 
+                        dataGridView();
                     }
                     else
                     {
