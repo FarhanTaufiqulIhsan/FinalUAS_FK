@@ -36,7 +36,7 @@ namespace FinalUAS_FK
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "SELECT ID_Penjualan, Tanggal_Penjualan, ID_Penjual, Produk FROM dbo.Penjualan_Produk";
+            string query = "SELECT ID_Penjualan, Tanggal_Penjualan, ID_Penjual, ID_Produk FROM dbo.Penjualan_Produk";
             SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
