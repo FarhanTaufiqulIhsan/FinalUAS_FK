@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace FinalUAS_FK
 {
@@ -221,6 +222,73 @@ namespace FinalUAS_FK
                 {
                     MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnUpd_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["Kode_Produksi"].Value.ToString();
+            string idsuplier = cbxIdS.SelectedValue.ToString();
+            string idproduk = cbxIdP.SelectedValue.ToString();
+            string date = dtTp.Text;
+
+
+            if (id == "")
+            {
+                MessageBox.Show("Kode Produksi tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idsuplier == "")
+            {
+                MessageBox.Show("Pilih nama suplier", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idproduk == "")
+            {
+                MessageBox.Show("Pilih nama produk", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (date == "")
+            {
+                MessageBox.Show("Pilih tanggal", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE Produksi SET ID_Suplier = @ID_Suplier, ID_Produk = @ID_Produk, Tanggal_Produksi = @Tanggal_Produksi WHERE Kode_Produksi = @Kode_Produksi";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@Kode_Produksi", id);
+                command.Parameters.AddWithValue("@ID_Suplier", idsuplier);
+                command.Parameters.AddWithValue("@ID_Produk", idproduk);
+                command.Parameters.AddWithValue("@Tanggal_Produksi", date);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }
