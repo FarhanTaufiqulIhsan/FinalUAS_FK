@@ -163,7 +163,7 @@ namespace FinalUAS_FK
             using (SqlCommand command = new SqlCommand(sql, koneksi))
             {
                 command.Parameters.AddWithValue("@ID_Penjual", idpenjual);
-                command.Parameters.AddWithValue("@ID_Suplier", idproduk);
+                command.Parameters.AddWithValue("@ID_Produk", idproduk);
                 command.Parameters.AddWithValue("@Tanggal_Penjualan", date);
                 command.Parameters.AddWithValue("@ID_Penjualan", idpenjualan);
 
