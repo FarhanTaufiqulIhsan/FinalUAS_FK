@@ -103,6 +103,32 @@ namespace FinalUAS_FK
             cbxIdPj.DataSource = dt;
         }
 
+        private void cbIdpr()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Produk, Nama_Produk FROM Produk";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID_Produk");
+            dt.Columns.Add("Nama_Produk");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["ID_Produk"] = reader["ID_Produk"].ToString();
+                row["Nama_Produk"] = reader["Nama_Produk"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxIdpr.DisplayMember = "Nama_Produk";
+            cbxIdpr.ValueMember = "ID_Produk";
+            cbxIdpr.DataSource = dt;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             string idpenjual = cbxIdPj.SelectedValue.ToString();
