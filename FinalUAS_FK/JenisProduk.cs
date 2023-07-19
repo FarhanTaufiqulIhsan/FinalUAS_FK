@@ -49,23 +49,25 @@ namespace FinalUAS_FK
         private void cbIdPr()
         {
             koneksi.Open();
-            string query = "SELECT ID_Produk FROM Produk";
+            string query = "SELECT ID_Produk, Nama_Produk FROM Produk";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Produk");
+            dt.Columns.Add("Nama_Produk");
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Produk"] = reader["ID_Produk"].ToString();
+                row["Nama_Produk"] = reader["Nama_Produk"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdp.DisplayMember = "ID_Produk";
+            cbxIdp.DisplayMember = "Nama_Produk";
             cbxIdp.ValueMember = "ID_Produk";
             cbxIdp.DataSource = dt;
         }
