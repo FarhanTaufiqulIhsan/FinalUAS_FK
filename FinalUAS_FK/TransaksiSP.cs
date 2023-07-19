@@ -50,47 +50,52 @@ namespace FinalUAS_FK
         private void cbIdp()
         {
             koneksi.Open();
-            string query = "SELECT ID_Penjual FROM Penjual";
+            string query = "SELECT ID_Penjual, Nama_Penjual FROM Penjual";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Penjual");
+            dt.Columns.Add("Nama_Penjual"); 
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Penjual"] = reader["ID_Penjual"].ToString();
+                row["Nama_Penjual"] = reader["Nama_Penjual"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdp.DisplayMember = "ID_Penjual";
+            cbxIdp.DisplayMember = "Nama_Penjual";
             cbxIdp.ValueMember = "ID_Penjual";
             cbxIdp.DataSource = dt;
+
         }
 
         private void cbIdS()
         {
             koneksi.Open();
-            string query = "SELECT ID_Suplier FROM Suplier";
+            string query = "SELECT ID_Suplier, Nama_Suplier FROM Suplier";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Suplier");
+            dt.Columns.Add("Nama_Suplier");
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Suplier"] = reader["ID_Suplier"].ToString();
+                row["Nama_Suplier"] = reader["Nama_Suplier"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdS.DisplayMember = "ID_Suplier";
+            cbxIdS.DisplayMember = "Nama_Suplier";
             cbxIdS.ValueMember = "ID_Suplier";
             cbxIdS.DataSource = dt;
         }
