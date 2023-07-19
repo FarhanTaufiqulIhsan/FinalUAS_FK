@@ -29,6 +29,8 @@ namespace FinalUAS_FK
         public PenjuialanProduk()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
