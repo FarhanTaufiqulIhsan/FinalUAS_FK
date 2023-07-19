@@ -43,6 +43,7 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDlt = new System.Windows.Forms.Button();
+            this.btnUpd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,11 +183,22 @@
             this.btnDlt.UseVisualStyleBackColor = true;
             this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
             // 
+            // btnUpd
+            // 
+            this.btnUpd.Location = new System.Drawing.Point(653, 259);
+            this.btnUpd.Name = "btnUpd";
+            this.btnUpd.Size = new System.Drawing.Size(88, 33);
+            this.btnUpd.TabIndex = 15;
+            this.btnUpd.Text = "Update";
+            this.btnUpd.UseVisualStyleBackColor = true;
+            this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
+            // 
             // JenisProduk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpd);
             this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOpen);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnDlt;
+        private System.Windows.Forms.Button btnUpd;
     }
 }
