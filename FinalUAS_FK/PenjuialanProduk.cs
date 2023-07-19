@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace FinalUAS_FK
 {
     public partial class PenjuialanProduk : Form
     {
+        private string stringConnection = "data source=LAPTOP-P9JKEJMQ\\FARHANSQL;" + "database=Pemesanan_Baju_UAS;User ID=sa;password=Laserin45@";
+        private SqlConnection koneksi;
         public PenjuialanProduk()
         {
             InitializeComponent();
@@ -22,6 +25,11 @@ namespace FinalUAS_FK
             Penjual p = new Penjual();
             p.Show();
             this.Hide();
+        }
+
+        private void txtIdPjn_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -97,6 +97,7 @@
             this.txtIdPjn.Name = "txtIdPjn";
             this.txtIdPjn.Size = new System.Drawing.Size(225, 22);
             this.txtIdPjn.TabIndex = 5;
+            this.txtIdPjn.TextChanged += new System.EventHandler(this.txtIdPjn_TextChanged);
             // 
             // dtP
             // 
