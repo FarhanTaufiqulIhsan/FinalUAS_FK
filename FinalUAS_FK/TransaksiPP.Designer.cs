@@ -107,7 +107,7 @@
             // 
             this.txtIdt.Location = new System.Drawing.Point(236, 255);
             this.txtIdt.Name = "txtIdt";
-            this.txtIdt.Size = new System.Drawing.Size(100, 22);
+            this.txtIdt.Size = new System.Drawing.Size(200, 22);
             this.txtIdt.TabIndex = 6;
             // 
             // cbxIdPr
@@ -115,7 +115,7 @@
             this.cbxIdPr.FormattingEnabled = true;
             this.cbxIdPr.Location = new System.Drawing.Point(236, 291);
             this.cbxIdPr.Name = "cbxIdPr";
-            this.cbxIdPr.Size = new System.Drawing.Size(121, 24);
+            this.cbxIdPr.Size = new System.Drawing.Size(200, 24);
             this.cbxIdPr.TabIndex = 7;
             // 
             // cbxIdPl
@@ -123,7 +123,7 @@
             this.cbxIdPl.FormattingEnabled = true;
             this.cbxIdPl.Location = new System.Drawing.Point(236, 329);
             this.cbxIdPl.Name = "cbxIdPl";
-            this.cbxIdPl.Size = new System.Drawing.Size(121, 24);
+            this.cbxIdPl.Size = new System.Drawing.Size(200, 24);
             this.cbxIdPl.TabIndex = 8;
             // 
             // dtT
@@ -137,7 +137,7 @@
             // 
             this.txtTb.Location = new System.Drawing.Point(236, 389);
             this.txtTb.Name = "txtTb";
-            this.txtTb.Size = new System.Drawing.Size(100, 22);
+            this.txtTb.Size = new System.Drawing.Size(200, 22);
             this.txtTb.TabIndex = 10;
             // 
             // btnOpen
@@ -181,9 +181,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(473, 359);
+            this.btnDelete.Location = new System.Drawing.Point(579, 255);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(75, 33);
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;

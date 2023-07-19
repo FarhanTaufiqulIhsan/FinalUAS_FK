@@ -49,23 +49,25 @@ namespace FinalUAS_FK
         private void cbIdPr()
         {
             koneksi.Open();
-            string query = "SELECT ID_Produk FROM Produk";
+            string query = "SELECT ID_Produk, Nama_Produk FROM Produk";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Produk");
+            dt.Columns.Add("Nama_Produk");
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Produk"] = reader["ID_Produk"].ToString();
+                row["Nama_Produk"] = reader["Nama_Produk"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdPr.DisplayMember = "ID_Produk";
+            cbxIdPr.DisplayMember = "Nama_Produk";
             cbxIdPr.ValueMember = "ID_Produk";
             cbxIdPr.DataSource = dt;
         }
@@ -73,23 +75,25 @@ namespace FinalUAS_FK
         private void cbIdPl()
         {
             koneksi.Open();
-            string query = "SELECT ID_Pelanggan FROM Pelanggan";
+            string query = "SELECT ID_Pelanggan, Nama_Pelanggan FROM Pelanggan";
             SqlCommand cmd = new SqlCommand(query, koneksi);
             SqlDataReader reader = cmd.ExecuteReader();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("ID_Pelanggan");
+            dt.Columns.Add("Nama_Pelanggan");
 
             while (reader.Read())
             {
                 DataRow row = dt.NewRow();
                 row["ID_Pelanggan"] = reader["ID_Pelanggan"].ToString();
+                row["Nama_Pelanggan"] = reader["Nama_Pelanggan"].ToString();
                 dt.Rows.Add(row);
             }
 
             koneksi.Close();
 
-            cbxIdPl.DisplayMember = "ID_Pelanggan";
+            cbxIdPl.DisplayMember = "Nama_Pelanggan";
             cbxIdPl.ValueMember = "ID_Pelanggan";
             cbxIdPl.DataSource = dt;
         }
