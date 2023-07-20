@@ -42,7 +42,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnJp = new System.Windows.Forms.Button();
             this.btnUpdt = new System.Windows.Forms.Button();
             this.btnDlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -172,16 +171,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnJp
-            // 
-            this.btnJp.Location = new System.Drawing.Point(521, 385);
-            this.btnJp.Name = "btnJp";
-            this.btnJp.Size = new System.Drawing.Size(121, 34);
-            this.btnJp.TabIndex = 14;
-            this.btnJp.Text = "Jenis Produk";
-            this.btnJp.UseVisualStyleBackColor = true;
-            this.btnJp.Click += new System.EventHandler(this.btnJp_Click);
-            // 
             // btnUpdt
             // 
             this.btnUpdt.Location = new System.Drawing.Point(587, 223);
@@ -209,7 +198,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.btnUpdt);
-            this.Controls.Add(this.btnJp);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -249,7 +237,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnJp;
         private System.Windows.Forms.Button btnUpdt;
         private System.Windows.Forms.Button btnDlt;
     }

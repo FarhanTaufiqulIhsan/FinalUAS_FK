@@ -123,12 +123,7 @@ namespace FinalUAS_FK
             this.Hide();
         }
 
-        private void btnJp_Click(object sender, EventArgs e)
-        {
-            JenisProduk jp = new JenisProduk();
-            jp.Show();
-            this.Hide();
-        }
+        
 
         private void btnUpdt_Click(object sender, EventArgs e)
         {
