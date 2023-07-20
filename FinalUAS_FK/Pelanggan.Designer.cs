@@ -214,7 +214,7 @@
             // 
             this.btnTrPP.Location = new System.Drawing.Point(615, 332);
             this.btnTrPP.Name = "btnTrPP";
-            this.btnTrPP.Size = new System.Drawing.Size(101, 37);
+            this.btnTrPP.Size = new System.Drawing.Size(121, 53);
             this.btnTrPP.TabIndex = 19;
             this.btnTrPP.Text = "Transaksi PP";
             this.btnTrPP.UseVisualStyleBackColor = true;
