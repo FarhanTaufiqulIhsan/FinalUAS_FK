@@ -33,6 +33,7 @@
             this.btnProduk = new System.Windows.Forms.Button();
             this.btnPelanggan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnjnspr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSuplier
@@ -85,11 +86,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Pemesanan Baju";
             // 
+            // btnjnspr
+            // 
+            this.btnjnspr.Location = new System.Drawing.Point(323, 305);
+            this.btnjnspr.Name = "btnjnspr";
+            this.btnjnspr.Size = new System.Drawing.Size(113, 59);
+            this.btnjnspr.TabIndex = 6;
+            this.btnjnspr.Text = "Jenis Produk";
+            this.btnjnspr.UseVisualStyleBackColor = true;
+            this.btnjnspr.Click += new System.EventHandler(this.btnjnspr_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnjnspr);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPelanggan);
             this.Controls.Add(this.btnProduk);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Button btnProduk;
         private System.Windows.Forms.Button btnPelanggan;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnjnspr;
     }
 }
 

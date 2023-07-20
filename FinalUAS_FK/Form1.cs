@@ -48,5 +48,12 @@ namespace FinalUAS_FK
             p.Show();
             this.Hide();
         }
+
+        private void btnjnspr_Click(object sender, EventArgs e)
+        {
+            JenisProduk jns = new JenisProduk();
+            jns.Show();
+            this.Hide();
+        }
     }
 }
